@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Prayer Request" max_length="40" name="x_435413_prayerlis_prayer_request" type="collection">
+        <element attributes="encode_utf8=false" label="Contacted By" max_length="32" name="contacted_by" reference="sys_user" type="reference"/>
+        <element label="Deacon" max_length="32" name="deacon" reference="sys_user" type="reference"/>
+        <element label="Last Contact Date" max_length="40" name="last_contact_date" type="glide_date"/>
+        <element label="Leader Name" max_length="32" name="leader_name" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" max_length="4000" name="notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Pastor" max_length="32" name="pastor" reference="sys_user" type="reference"/>
+        <element label="Request" max_length="65536" name="request" type="html"/>
+        <element attributes="encode_utf8=false" label="Submitter" max_length="32" name="submitter" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="submitter"/>
+        </index>
+        <index name="index2">
+            <element name="deacon"/>
+        </index>
+        <index name="index3">
+            <element name="leader_name"/>
+        </index>
+        <index name="index4">
+            <element name="pastor"/>
+        </index>
+        <index name="index5">
+            <element name="contacted_by"/>
+        </index>
+    </element>
+</database>
